@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object is a collection of data and it is non premitive & non indexed 
+        let bike={
+    name:"duke390",
+    cc:"373cc",
+    price:"3.4lakh",
+    torque:"18.5 ps"
+}
+//keys : it returns all the keys in the object in a array  and we can determine the length of the array also
+console.log(Object.keys(bike));
+console.log(Object.keys(bike).length);
+//values : it returns all the values in the object in a array
+console.log(Object.values(bike));
+//entries : it returns all the records in the object that we have created
+console.log(Object.entries(bike));
+//Assign:It is used to combine two or more objects (concat in array methods)
+let brand={
+    Brand_name:"ktm",
+    high_end_model:"duke1290",
+    Origin:"austrailia"
+}
+console.log(Object.assign(brand,bike));
+//Seal:it is a method that is used to stop the external operations but not the internal operations like udpation 
+let marks={
+    m1:"b",
+    chem:"a",
+    phy:"o"
+
+}
+console.log(Object.seal(marks));
+marks.student_name="uday"
+marks.m1="a+";
+console.log(marks);
+console.log(Object.isSealed(marks));
+//Freeze: it stops both the internal and external operations on the object
+let school={
+    Name:"vidayavahini",
+    location:"allavaram",
+    classes:"upto ssc"
+}
+console.log(Object.freeze(bike));
+school.location="amalapuram"
+console.log(Object.isFrozen(bike));
+
+//Loop in object
+//just like tha arrays we can also use a loop on the objects too that is for-in loop 
+let mobile={
+    company:"google",
+    model:"pixel 9",
+    price:"85000"
+}
+for (let i in mobile){
+    console.log(mobile[i])
+}
+
+    </script>
+</body>
+</html>
