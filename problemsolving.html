@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1.find the second largest number in the array
+let numbers=[1,2,3,4,5,6,7,4,2,1]
+let arr_2=[]
+for (let i=0;i<numbers.length;i++){
+    if(arr_2.includes(numbers[i])){
+        //do nothing
+    }else{
+        arr_2.push(numbers[i])
+    }
+}
+arr_2.sort((a,b)=>(a-b));
+console.log(arr_2);
+console.log(arr_2[arr_2.length-2]);
+//2.find the sum of even digits
+let num=123845
+let even_sum=0
+while (num>0){
+    let last=num%10
+    if(last%2==0){
+        even_sum+=last
+    }else{
+        //do nothing
+    }
+    num=Math.floor(num/10)
+}
+console.log(even_sum);
+//3.check whether the given number is prime or not
+let digit=7
+function prime_check(num){
+    let factors=0
+    if (num<=1){ return false }  
+    for (let i=2;i<num;i++){
+        if (num%i==0){
+            factors+=1
+            break
+        }
+    }
+    if (factors==0){
+        return true
+    }else{
+        return false
+    }
+}
+console.log(prime_check(digit));
+//4.reverse a number
+let given_number="1234"
+let reversed=""
+for (let i=given_number.length-1;i>=0;i--){
+    reversed+=given_number[i]
+}
+console.log(reversed)
+//5.fibonacci series
+let n=10
+let first_number=0
+let second_number=1
+for (let i=0;i<=n;i++){
+    console.log(first_number);
+    let third_number=first_number+second_number
+    first_number=second_number
+    second_number=third_number
+}
+//6.write a function to check whether the given number is a armstrong number or not
+let taken_number=371
+// let taken_number=+prompt("enter a number to check for armstrong");
+function armstrong_check(num){
+    let temp=num
+    let total_sum=0
+    let length=0
+    let original=num
+while(num!=0){
+    num=Math.floor(num/10)
+    length++;
+    console.log(`${length}`)
+}
+while (temp!=0){
+    let prev=temp%10
+    total_sum=total_sum+prev**length
+    temp=Math.floor(temp/10)
+}
+if(total_sum==original){
+    console.log(`${original}, is a armstrong number`);
+    return true;
+}else{
+    console.log(`${original}, is not armstrong number`)
+    return false;
+}
+
+}
+console.log(armstrong_check(taken_number))
+
+//7.factorial of a given number
+//using recursion
+const number=6
+function factorials(n){
+    if (n==1){
+        return 1;
+    }
+    return n*factorials(n-1)
+}
+let result=factorials(number)
+console.log(result);
+//using for loop 
+let fact_number=5
+let factorial=1
+for (let i=1;i<=fact_number;i++){
+    factorial*=i
+}
+console.log(factorial);
+    </script>
+</body>
+</html>
