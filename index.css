@@ -1,0 +1,61 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: none;
+    background-image: url("./fields.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.background{
+    /* background-color:burlywood; */
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.card{
+    background-color:white;
+    width:500px;
+    height:300px;
+    border-radius: 10px;
+   flex-direction:column;   
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+.heading{
+    font-size:60px;
+    font-weight:500px;
+    font-family:sans-serif;
+    margin-bottom: 16px;
+}
+
+.time{
+    padding:10px;
+    font-size: 50px;
+    /* display: flex;
+    flex-direction: column; */
+}
+.all{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+}
+.btn{
+    font-weight: 100;
+    font-size: 25px;
+    padding: 5px;
+    border-radius:5px;
+    color:black;
+    size: 30px;
+    border: none;
+    background-color:burlywood;
+    cursor:pointer;
+}
