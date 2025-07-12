@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "item": "chicken biryani",
+      "quantity": 2,
+      "price": 250
+    },
+    {
+      "item": "mutton curry",
+      "quantity": 3,
+      "price": 250,
+      "id": "36e1"
+    },
+    {
+      "id": "02b1",
+      "item": "paya soup family",
+      "quantity": 1,
+      "price": 450
+    }
+  ]
+}
